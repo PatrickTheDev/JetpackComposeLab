@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">JetpackComposeLab</string>
+
+    <string name="title_animations_screen">Animations</string>
+    <string name="title_animated_visibility_screen">Animated visibility</string>
+    <string name="title_animated_color_screen">Animated visibility</string>
+    <string name="text_button_animated_color">Change color!</string>
+
+    <string name="information_tap_anywhere">Tap anywhere on the screen!</string>
+</resources>
