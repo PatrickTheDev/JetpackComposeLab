@@ -6,8 +6,6 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Button
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -18,7 +16,7 @@ import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import com.github.patrickpaul.jetpackcomposelab.R
-import com.github.patrickpaul.jetpackcomposelab.common.ui.components.DefaultAppBar
+import com.github.patrickpaul.jetpackcomposelab.common.ui.components.DefaultScaffold
 import com.github.patrickpaul.jetpackcomposelab.common.ui.theme.AppColors
 import com.github.patrickpaul.jetpackcomposelab.common.util.flip
 
@@ -28,14 +26,7 @@ const val DESTINATION_ANIMATED_COLOR = "animated-color"
 fun AnimatedColorScreen(
     onBackNav: () -> Unit,
 ) {
-    Scaffold(
-        topBar = {
-            DefaultAppBar(
-                titleResId = R.string.title_animated_color_screen,
-                onBackNav = { onBackNav() },
-            )
-        }
-    ) { innerPadding ->
+    DefaultScaffold(onBackNav = onBackNav) { innerPadding ->
         Content(modifier = Modifier.padding(innerPadding))
     }
 }

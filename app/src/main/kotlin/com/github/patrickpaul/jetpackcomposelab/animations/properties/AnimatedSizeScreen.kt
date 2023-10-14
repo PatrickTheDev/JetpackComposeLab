@@ -23,6 +23,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.github.patrickpaul.jetpackcomposelab.R
 import com.github.patrickpaul.jetpackcomposelab.common.ui.components.DefaultAppBar
+import com.github.patrickpaul.jetpackcomposelab.common.ui.components.DefaultScaffold
 import com.github.patrickpaul.jetpackcomposelab.common.ui.components.VerticalSpacer
 import com.github.patrickpaul.jetpackcomposelab.common.ui.theme.AppColors
 import com.github.patrickpaul.jetpackcomposelab.common.util.flip
@@ -33,14 +34,7 @@ const val DESTINATION_ANIMATED_SIZE = "animated-size"
 fun AnimatedSizeScreen(
     onBackNav: () -> Unit,
 ) {
-    Scaffold(
-        topBar = {
-            DefaultAppBar(
-                titleResId = R.string.title_animated_visibility_screen,
-                onBackNav = { onBackNav() },
-            )
-        }
-    ) { innerPadding ->
+    DefaultScaffold(onBackNav = onBackNav) { innerPadding ->
         Content(modifier = Modifier.padding(innerPadding))
     }
 }

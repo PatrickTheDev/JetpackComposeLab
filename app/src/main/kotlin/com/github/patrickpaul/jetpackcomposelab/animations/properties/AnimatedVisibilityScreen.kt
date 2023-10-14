@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -21,7 +20,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.github.patrickpaul.jetpackcomposelab.R
-import com.github.patrickpaul.jetpackcomposelab.common.ui.components.DefaultAppBar
+import com.github.patrickpaul.jetpackcomposelab.common.ui.components.DefaultScaffold
 import com.github.patrickpaul.jetpackcomposelab.common.ui.components.VerticalSpacer
 import com.github.patrickpaul.jetpackcomposelab.common.ui.theme.AppColors
 import com.github.patrickpaul.jetpackcomposelab.common.util.flip
@@ -32,14 +31,7 @@ const val DESTINATION_ANIMATED_VISIBILITY = "animated-visibilty"
 fun AnimatedVisibilityScreen(
     onBackNav: () -> Unit,
 ) {
-    Scaffold(
-        topBar = {
-            DefaultAppBar(
-                titleResId = R.string.title_animated_visibility_screen,
-                onBackNav = { onBackNav() },
-            )
-        }
-    ) { innerPadding ->
+    DefaultScaffold(onBackNav = onBackNav) { innerPadding ->
         Content(modifier = Modifier.padding(innerPadding))
     }
 }
