@@ -24,6 +24,7 @@ import com.github.patrickpaul.jetpackcomposelab.R
 import com.github.patrickpaul.jetpackcomposelab.common.ui.components.DefaultAppBar
 import com.github.patrickpaul.jetpackcomposelab.common.ui.components.VerticalSpacer
 import com.github.patrickpaul.jetpackcomposelab.common.ui.theme.AppColors
+import com.github.patrickpaul.jetpackcomposelab.common.util.flip
 
 const val DESTINATION_ANIMATED_VISIBILITY = "animated-visibilty"
 
@@ -52,7 +53,7 @@ private fun Content(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .clickable { visible.value = !visible.value },
+            .clickable { visible.flip() },
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {

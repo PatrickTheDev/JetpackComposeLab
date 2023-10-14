@@ -20,6 +20,7 @@ import androidx.compose.ui.res.stringResource
 import com.github.patrickpaul.jetpackcomposelab.R
 import com.github.patrickpaul.jetpackcomposelab.common.ui.components.DefaultAppBar
 import com.github.patrickpaul.jetpackcomposelab.common.ui.theme.AppColors
+import com.github.patrickpaul.jetpackcomposelab.common.util.flip
 
 const val DESTINATION_ANIMATED_COLOR = "animated-color"
 
@@ -52,7 +53,7 @@ private fun Content(
 
     Column(
         modifier = modifier
-            .clickable { animateBackgroundColor.value = !animateBackgroundColor.value }
+            .clickable { animateBackgroundColor.flip() }
             .fillMaxSize()
             .drawBehind {
                 drawRect(animatedColor.value)
