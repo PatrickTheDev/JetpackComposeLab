@@ -24,6 +24,7 @@ sealed class AnimationsScreenActions {
     data object NavToAnimatedVisibility : AnimationsScreenActions()
     data object NavToAnimatedColor : AnimationsScreenActions()
     data object NavToAnimatedSize : AnimationsScreenActions()
+    data object NavToAnimatedPosition : AnimationsScreenActions()
 }
 
 @Composable
@@ -75,6 +76,14 @@ private fun Content(
             onClick = { actions(NavToAnimatedSize) }
         ) {
             Text(text = "Animate size")
+        }
+
+        VerticalSpacer()
+
+        Button(
+            onClick = { actions(NavToAnimatedPosition) }
+        ) {
+            Text(text = "Animate position")
         }
     }
 }
